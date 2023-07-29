@@ -80,7 +80,11 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .subtitle p {
-    margin-top: 15px;
+  .title {
+    margin-top: 10px;
+  }
+
+  .subtitle {
+    margin-top: 5px;
   }
 }
