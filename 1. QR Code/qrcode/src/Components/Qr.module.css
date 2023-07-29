@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -14,6 +15,7 @@
   border-radius: 15px;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .img {
@@ -79,12 +81,6 @@
 
 @media only screen and (max-width: 400px) {
   .title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 19px;
-    margin-top: 10px;
-    width: 254px;
-    height: 56px;
-    margin: 0 auto;
+    margin-top: 12px;
   }
 }
