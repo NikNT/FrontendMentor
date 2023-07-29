@@ -19,6 +19,9 @@ const Qr = () => {
           </p>
         </div>
       </div>
+      <div className={styles.footer}>
+        Challenge by Frontend Mentor. Coded by Nikhil Tanwar.
+      </div>
     </div>
   );
 };

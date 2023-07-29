@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -31,24 +32,31 @@
 .title {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+  margin-top: 9px;
   width: 254px;
   height: 56px;
   margin: 0 auto;
 }
 
 .title p {
-  font-size: 22px;
-  font-weight: 600;
-  text-align: center;
   color: #1f3251;
-  margin-top: 9px;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .subtitle {
   margin: 0 auto;
   height: 57px;
   width: 243px;
+}
+
+.subtitle p {
+  margin-top: 19px;
   color: #7b879d;
   text-align: center;
   font-family: Outfit;
@@ -58,6 +66,13 @@
   line-height: normal;
 }
 
-.subtitle p {
-  margin-top: 19px;
+.footer {
+  color: #1f3251;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 28px;
 }
