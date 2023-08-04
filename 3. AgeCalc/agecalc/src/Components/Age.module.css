@@ -6,6 +6,13 @@
   align-items: center;
 }
 
+.inside {
+  width: 85%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 .wrapper {
   height: 579px;
   width: 768px;
@@ -16,7 +23,7 @@
 
 .form {
   display: flex;
-  gap: 20px;
+  width: 80%;
 }
 
 .form_element {
@@ -26,9 +33,9 @@
 
 .image {
   width: 100%;
-  width: 90%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .image_wrapper {
@@ -39,4 +46,61 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image_wrapper img {
+  height: 50%;
+}
+
+.line {
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+  width: 90%;
+  background: red;
+  height: 0px;
+  position: relative;
+  top: 35px;
+}
+
+label {
+  color: hsl(0, 1%, 44%);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+input[type="text"] {
+  padding: 15px 5px;
+  width: 70%;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 86%);
+  font-size: 25px;
+  padding-left: 20px;
+  caret-color: hsl(259, 100%, 65%);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 1.5px solid hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content div {
+  margin-bottom: -20px;
+}
+
+span {
+  color: hsl(259, 100%, 65%);
+  font-size: 75px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 75px;
+  font-weight: bold;
+  font-style: italic;
 }
