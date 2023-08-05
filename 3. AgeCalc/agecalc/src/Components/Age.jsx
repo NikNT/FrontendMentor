@@ -3,10 +3,6 @@ import styles from "./Age.module.css";
 import icon from "../Assets/icon-arrow.svg";
 
 const Age = () => {
-  // const [day, setDay] = useState("");
-  // const [month, setMonth] = useState("");
-  // const [year, setYear] = useState("");
-
   const [input, setInput] = useState({
     day: "",
     month: "",
