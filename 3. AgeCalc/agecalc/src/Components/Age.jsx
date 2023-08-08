@@ -18,13 +18,15 @@ const Age = () => {
   };
 
   const handleClick = () => {
-    console.log(input);
     setInput({
       day: "",
       month: "",
       year: "",
     });
   };
+
+  const date = new Date();
+  const inpDate = date.getDate() - input.day;
 
   return (
     <div className={styles.container}>
@@ -74,17 +76,34 @@ const Age = () => {
           <div className={styles.content}>
             <div className={styles.years}>
               <p>
-                <span>{input.year ? input.year : "- -"}</span> years
+                <span>
+                  {input.year ? date.getFullYear() - input.year : "- -"}
+                </span>
+                years
               </p>
             </div>
             <div className={styles.month}>
               <p>
-                <span>-</span> months
+                <span>
+                  {input.month
+                    ? input.month >= date.getMonth() + 1
+                      ? 12 + (date.getMonth() - input.month)
+                      : date.getMonth() - input.month
+                    : "- -"}
+                </span>{" "}
+                months
               </p>
             </div>
             <div className={styles.days}>
               <p>
-                <span>- -</span> days
+                <span>
+                  {input.day
+                    ? input.day > date.getDate()
+                      ? 30 + date.getDate() - input.day
+                      : date.getDate() - input.day
+                    : "- -"}
+                </span>{" "}
+                days
               </p>
             </div>
           </div>
