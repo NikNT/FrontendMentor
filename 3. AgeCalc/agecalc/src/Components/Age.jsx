@@ -15,6 +15,8 @@ const Age = () => {
     year: "- -",
   });
 
+  const [emptyForm, setEmptyForm] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setInput((prevState) => ({
@@ -24,6 +26,12 @@ const Age = () => {
   };
 
   const handleClick = () => {
+    if (input.day === "" && input.month === "" && input.year === "") {
+      setEmptyForm(true);
+      console.log("Empty Form");
+      return;
+    }
+
     const date = new Date();
 
     const today = date.getDate();
@@ -49,48 +57,67 @@ const Age = () => {
     });
   };
 
+  const fieldRequired = (
+    <h6 className={styles.field_required}>This field is required</h6>
+  );
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.inside}>
           <div className={styles.form}>
             <div className={styles.form_element}>
-              <label htmlFor="day">D a y</label>
+              <label htmlFor="day" className={emptyForm && styles.empty_value}>
+                D a y
+              </label>
               <input
                 type="text"
                 name="day"
                 placeholder="DD"
                 value={input.day}
                 onChange={handleInputChange}
+                className={emptyForm ? styles.error_border : ""}
               />
+              {emptyForm && fieldRequired}
             </div>
 
             <div className={styles.form_element}>
-              <label htmlFor="month">M o n t h</label>
+              <label
+                htmlFor="month"
+                className={emptyForm && styles.empty_value}
+              >
+                M o n t h
+              </label>
               <input
                 type="text"
                 name="month"
                 placeholder="MM"
                 value={input.month}
                 onChange={handleInputChange}
+                className={emptyForm ? styles.error_border : ""}
               />
+              {emptyForm && fieldRequired}
             </div>
 
             <div className={styles.form_element}>
-              <label htmlFor="year">Y e a r</label>
+              <label htmlFor="year" className={emptyForm && styles.empty_value}>
+                Y e a r
+              </label>
               <input
                 type="text"
                 name="year"
                 placeholder="YYYY"
                 value={input.year}
                 onChange={handleInputChange}
+                className={emptyForm ? styles.error_border : ""}
               />
+              {emptyForm && fieldRequired}
             </div>
           </div>
           <div className={styles.image}>
             <div className={styles.line}></div>
-            <div className={styles.image_wrapper}>
-              <img src={icon} alt="" onClick={handleClick} />
+            <div className={styles.image_wrapper} onClick={handleClick}>
+              <img src={icon} alt="Down Arrow" />
             </div>
           </div>
 
