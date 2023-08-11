@@ -120,3 +120,62 @@ p {
 .error_border {
   border: 1px solid hsl(0, 100%, 67%) !important;
 }
+
+@media only screen and (max-width: 375px) {
+  .wrapper {
+    width: 350px;
+    height: 380px;
+    border-radius: 25px;
+    border-bottom-right-radius: 100px;
+  }
+
+  .form {
+    width: 320px;
+  }
+
+  .line {
+    position: relative;
+    left: 10px;
+  }
+
+  label {
+    font-size: 10px;
+  }
+
+  input[type="text"] {
+    padding: 10px 2px;
+    font-size: 15px;
+  }
+
+  input::placeholder {
+    font-size: 13px;
+  }
+
+  .image {
+    margin-top: 25px;
+  }
+
+  .image_wrapper {
+    position: relative;
+    right: 130px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .image_wrapper img {
+    height: 35%;
+  }
+
+  .line {
+    top: 25px;
+  }
+
+  span {
+    font-size: 40px;
+    margin-right: 3px;
+  }
+
+  p {
+    font-size: 40px;
+  }
+}
