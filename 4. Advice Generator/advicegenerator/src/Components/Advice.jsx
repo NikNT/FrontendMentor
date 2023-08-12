@@ -11,7 +11,6 @@ const Advice = () => {
   });
 
   const [buttonClick, setButtonClick] = useState(0);
-  const [view, setView] = useState(window.innerWidth);
 
   useEffect(() => {
     fetch("https://api.adviceslip.com/advice")
@@ -29,18 +28,6 @@ const Advice = () => {
     setButtonClick(buttonClick + 1);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setView(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
       <div className={styles.container}>
@@ -53,10 +40,11 @@ const Advice = () => {
               <p> “{advice.quote}” </p>
             </div>
             <div className={styles.image}>
-              <img
-                src={view >= 393 ? desktopPattern : mobilePattern}
-                alt="Divider"
-              />
+              <picture>
+                <source media="(min-width: 394px)" srcSet={desktopPattern} />
+                <source media="(max-width: 393px)" srcSet={mobilePattern} />
+                <img src={desktopPattern} alt="Divider" />
+              </picture>
             </div>
           </div>
           <div className={styles.dice}>

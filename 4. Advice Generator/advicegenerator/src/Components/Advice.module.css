@@ -75,6 +75,26 @@
   }
 }
 
+@media (min-width: 394px) {
+  .desktopimage {
+    background-image: url("../Assets/pattern-divider-desktop.svg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 393px) {
+  .mobileimage {
+    background-image: url("../Assets/pattern-divider-mobile.svg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 @media only screen and (max-width: 393px) {
   .wrapper {
     height: 347px;
@@ -89,6 +109,11 @@
   .id p {
     font-size: 12px;
     letter-spacing: 3px;
+  }
+
+  .quote p {
+    font-size: 24px;
+    letter-spacing: -0.24px;
   }
 
   .dice {
