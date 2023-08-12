@@ -47,8 +47,8 @@ const Advice = () => {
               </picture>
             </div>
           </div>
-          <div className={styles.dice}>
-            <img src={dice} alt="Dice" onClick={generateNewQuote} />
+          <div className={styles.dice} onClick={generateNewQuote}>
+            <img src={dice} alt="Dice" />
           </div>
         </div>
       </div>
