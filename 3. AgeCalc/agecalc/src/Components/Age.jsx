@@ -36,6 +36,16 @@ const Age = () => {
     if (emptyForm) {
       setEmptyForm(false);
     }
+
+    if (!validityOfCompleteDate) {
+      setValidityOfCompleteDate(true);
+    }
+
+    setValidateInput({
+      day: true,
+      month: true,
+      year: true,
+    });
   };
 
   const checkCompleteDate = (year, month, day) => {
@@ -56,22 +66,13 @@ const Age = () => {
       return;
     }
 
-    //Check II - Entered Date is Valid or Not
-    const checkDate = checkCompleteDate(input.year, input.month, input.day);
-
-    if (!checkDate) {
-      setValidityOfCompleteDate(false);
-      console.log("Wrong Date");
-      return;
-    }
-
-    // Check III - Either Day | Month | Year field is empty
+    // Check II - Either Day | Month | Year field is empty
 
     const isValidDay = parseInt(input.day) >= 1 && parseInt(input.day) <= 31;
     const isValidMonth =
       parseInt(input.month) >= 1 && parseInt(input.month) <= 12;
     const isValidYear =
-      parseInt(input.year) >= 1900 &&
+      // parseInt(input.year) >= 1900 &&
       parseInt(input.year) <= date.getFullYear();
 
     console.log("Day", isValidDay);
@@ -87,6 +88,15 @@ const Age = () => {
     }));
 
     console.log("is Valid", validateInput.isValid);
+
+    //Check III - Entered Date is Valid or Not
+    const checkDate = checkCompleteDate(input.year, input.month, input.day);
+
+    if (!checkDate) {
+      setValidityOfCompleteDate(false);
+      console.log("Wrong Date");
+      return;
+    }
 
     if (!isValidDay || !isValidMonth || !isValidYear) {
       return;
@@ -201,7 +211,7 @@ const Age = () => {
               />
               {emptyForm && fieldRequired}
               {!validateInput.year && (
-                <h6 className={styles.field_required}>Must be a valid year</h6>
+                <h6 className={styles.field_required}>Must be in the past</h6>
               )}
             </div>
           </div>
