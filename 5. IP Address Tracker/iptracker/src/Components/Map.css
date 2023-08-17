@@ -1,6 +1,5 @@
 .leaflet-container {
-  height: calc(100vh - 58px);
-  width: 100%;
+  height: calc(100vh - 300px);
+  max-width: 1440px;
   margin: 0 auto;
-  border-radius: 15px;
 }
