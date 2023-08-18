@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Map from "./Map";
 import desktopHeader from "../assets/pattern-bg-desktop.png";
+import arrow from "../assets/icon-arrow.svg";
 
 const IP = () => {
   const [ip, setIP] = useState("");
@@ -41,6 +42,14 @@ const IP = () => {
         <header className="flex justify-center">
           <img src={desktopHeader} alt="Header Image" />
         </header>
+        <div className="absolute ">
+          <h1>IP Address Tracker</h1>
+          <div>
+            <input type="text" />
+            <img src={arrow} alt="Arrow" />
+          </div>
+          <div>IP Info</div>
+        </div>
         <main>
           <Map
             key={`${location.latitude}-${location.longitude}`}
@@ -49,7 +58,7 @@ const IP = () => {
           />
         </main>
       </div>
-      <label htmlFor="IP">IP: </label>
+      {/* <label htmlFor="IP">IP: </label>
       <input type="text" value={ip} onChange={handleChange} />
       <button onClick={handleClick}>Click</button>
       <p>Lat</p>
@@ -60,7 +69,7 @@ const IP = () => {
       {location.country}
       <b>City</b>
       <p>{location.city}</p>
-      <p>Map</p>
+      <p>Map</p> */}
       {/* <Map
         key={`${location.latitude}-${location.longitude}`}
         long={location.longitude}

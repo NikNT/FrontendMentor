@@ -1,5 +1,7 @@
 .leaflet-container {
-  height: calc(100vh - 300px);
+  /* height: calc(100vh - 285px); */
+  /* height: 55vh; */
+  height: 520px;
   max-width: 1440px;
   margin: 0 auto;
 }
