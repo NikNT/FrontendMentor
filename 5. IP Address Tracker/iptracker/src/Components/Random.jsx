@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Map from "./Map";
-import styles from "./IP.module.css";
 import desktopHeader from "../assets/pattern-bg-desktop.png";
 import arrow from "../assets/icon-arrow.svg";
+import "./IP.css";
 
 const IP = () => {
   const [ip, setIP] = useState("");
@@ -45,20 +45,22 @@ const IP = () => {
 
   return (
     <>
-      <div className={styles.container}>
+      <div>
         <header>
           <img src={desktopHeader} alt="Header Image" />
         </header>
-        <section className={styles.content}>
+        <section>
           <h1>IP Address Tracker</h1>
-          <div className={styles.input}>
+          <div>
             <input
               placeholder="Search for any IP address or domain"
               type="text"
               value={ip}
               onChange={handleChange}
             />
-            <img src={arrow} alt="Arrow" onClick={handleClick} />
+            <div>
+              <img src={arrow} alt="Arrow" onClick={handleClick} />
+            </div>
           </div>
           <section>
             <div>
@@ -87,6 +89,23 @@ const IP = () => {
           />
         </main>
       </div>
+      {/* <label htmlFor="IP">IP: </label>
+      <input type="text" value={ip} onChange={handleChange} />
+      <button onClick={handleClick}>Click</button>
+      <p>Lat</p>
+      {location.latitude}
+      <p>Long</p>
+      {location.longitude}
+      <b>Country</b>
+      {location.country}
+      <b>City</b>
+      <p>{location.city}</p>
+      <p>Map</p> */}
+      {/* <Map
+        key={`${location.latitude}-${location.longitude}`}
+        long={location.longitude}
+        lat={location.latitude}
+      /> */}
     </>
   );
 };
