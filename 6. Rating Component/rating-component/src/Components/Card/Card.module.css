@@ -1,0 +1,16 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  height: 350px;
+  width: 350px;
+  border-radius: 18px;
+  background: hsl(213, 19%, 18%);
+}
