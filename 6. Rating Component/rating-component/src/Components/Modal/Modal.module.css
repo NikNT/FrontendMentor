@@ -1,0 +1,39 @@
+.modal {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  top: 40px;
+}
+
+.modal_heading {
+  background: hsl(213, 19%, 23%);
+  width: 170px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.modal_heading p {
+  color: hsl(25, 97%, 53%);
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.thankyou {
+  margin-top: 10px;
+}
+
+footer p {
+  color: hsl(217, 12%, 63%);
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.6;
+}
