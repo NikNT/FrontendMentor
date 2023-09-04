@@ -168,3 +168,55 @@
   );
   cursor: pointer;
 }
+
+/*Responsive Design*/
+@media only screen and (max-width: 375px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    box-shadow: none;
+  }
+
+  .result {
+    width: 100vw;
+  }
+
+  .result-wrapper {
+    /* width: 100vw; */
+    height: 70vh;
+    gap: 10px;
+  }
+
+  .result-header h1 {
+    font-size: 20px;
+  }
+
+  .result-score {
+    height: 150px;
+    width: 150px;
+  }
+
+  .result-comment p {
+    font-size: 20px;
+  }
+
+  .result-footer p {
+    font-size: 15px;
+  }
+
+  .result-score :nth-child(1) {
+    font-size: 60px;
+  }
+
+  .result-score :nth-child(2) {
+    font-size: 12px;
+  }
+
+  .summary-header h2 {
+    top: 10px;
+  }
+}
