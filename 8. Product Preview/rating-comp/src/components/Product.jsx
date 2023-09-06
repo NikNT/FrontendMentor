@@ -8,13 +8,11 @@ const Product = () => {
     <div className="container">
       <div className="wrapper">
         <div className="image">
-          <figure>
-            <picture>
-              <source media="(min-width: 394px)" srcSet={desktopImage} />
-              <source media="(max-width: 393px)" srcSet={mobileImage} />
-              <img src={desktopImage} alt="Product Image" className="picture" />
-            </picture>
-          </figure>
+          <picture>
+            <source media="(min-width: 394px)" srcSet={desktopImage} />
+            <source media="(max-width: 393px)" srcSet={mobileImage} />
+            <img src={desktopImage} alt="Product Image" className="picture" />
+          </picture>
         </div>
         <div className="content">
           <Content />
