@@ -3,6 +3,7 @@ import equillibrium from "./assets/image-equilibrium.jpg";
 import eth from "./assets/icon-ethereum.svg";
 import clock from "./assets/icon-clock.svg";
 import avatar from "./assets/image-avatar.png";
+import view from "./assets/icon-view.svg";
 
 const App = () => {
   return (
@@ -11,6 +12,9 @@ const App = () => {
         <div className="card">
           <figure className="image">
             <img src={equillibrium} alt="Equillibrium" />
+            <div className="overlay">
+              <img src={view} alt="View" className="overlay-image" />
+            </div>
           </figure>
 
           <div className="title">
