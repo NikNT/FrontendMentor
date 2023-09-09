@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --inter: "Inter", sans-serif;
+  --lex: "Lexend Deca", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 1110px;
+  height: 446px;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 8px;
+  display: flex;
+}
+
+.content {
+  margin: 0 auto;
+  width: 430px;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.image {
+  width: 540px;
+  height: 100%;
+  position: relative;
+}
+
+.image img {
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.overlay {
+  width: 540px;
+  height: 100%;
+  background: hsl(277, 64%, 61%);
+  position: absolute;
+  top: 0;
+  opacity: 0.6;
+}
+
+.title {
+  height: 88px;
+  width: 403px;
+}
+
+.title h1 {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: var(--inter);
+  color: hsl(0, 0%, 100%);
+  line-height: 44px;
+}
+
+.title-insights {
+  color: hsl(277, 64%, 61%);
+}
+
+.description {
+  height: 75px;
+  width: 374px;
+  position: relative;
+  bottom: 30px;
+}
+
+.description h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: normal;
+  font-size: 15px;
+  font-family: var(--inter);
+  line-height: 25px;
+  opacity: 0.75;
+}
+
+.stats {
+  height: 56px;
+  width: 351px;
+  margin-bottom: 11px;
+}
+
+.stats-block {
+  height: 56px;
+  width: 83px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stats-numbers {
+  color: hsl(0, 0%, 100%);
+  font-family: var(--inter);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.stats-title {
+  color: hsl(0, 0%, 100%);
+  font-family: var(--lex);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
