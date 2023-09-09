@@ -62,7 +62,8 @@ body {
   background: hsl(277, 64%, 61%);
   position: absolute;
   top: 0;
-  opacity: 0.6;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
 }
 
 .title {
