@@ -47,7 +47,17 @@
           </div>
         </div>
         <div class="image">
-          <img src="./images/image-header-desktop.jpg" alt="Header" />
+          <picture>
+            <source
+              media="(max-width:767px)"
+              srcset="./images/image-header-mobile.jpg"
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="./images/image-header-desktop.jpg"
+            />
+            <img src="./images/image-header-desktop.jpg" alt="Header" />
+          </picture>
           <div class="overlay"></div>
         </div>
       </div>

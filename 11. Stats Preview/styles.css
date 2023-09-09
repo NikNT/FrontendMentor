@@ -133,3 +133,81 @@ body {
   text-transform: uppercase;
   opacity: 0.6;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .wrapper {
+    height: 780px;
+    width: 327px;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .image img,
+  .overlay {
+    height: 240px;
+    width: 327px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .content {
+    height: 540px;
+    width: 327px;
+    position: absolute;
+    align-items: center;
+  }
+
+  .title {
+    height: 96px;
+    width: 264px;
+  }
+
+  .title h1 {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .title-insights {
+    font-size: 28px;
+  }
+
+  .description {
+    height: 100px;
+    width: 264px;
+  }
+
+  .description h2 {
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .stats-block {
+    width: 264px;
+    height: 29px;
+  }
+
+  .stats-numbers {
+    font-size: 24px;
+  }
+
+  .stats-title {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
