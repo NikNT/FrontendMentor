@@ -1,17 +1,24 @@
 import "./index.css";
-import desktopIllustration from "./assets/illustration-woman-online-desktop.svg";
-// import desktopPattern from "./assets/bg-pattern-desktop.svg";
-import box from "./assets/illustration-box-desktop.svg";
+import Accordion from "./Components/Accordion";
+import accordionData from "./data.json";
+import Image from "./Components/Image";
+
 const App = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <div className="image">
-          <figure>
-            <img src={box} alt="Box" />
-            <img src={desktopIllustration} alt="FAQ Illustration" />
-          </figure>
+        <div>
+          <Image />
         </div>
+        <main className="content">
+          {accordionData.map((accordion, index) => (
+            <Accordion
+              key={index}
+              title={accordion.title}
+              content={accordion.content}
+            />
+          ))}
+        </main>
       </div>
     </div>
   );

@@ -38,3 +38,47 @@ body {
   background: url("./assets/bg-pattern-desktop.svg");
   background-repeat: no-repeat;
 }
+
+.accordion {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.accordionOpen {
+  border: none;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel.open {
+  display: block;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
