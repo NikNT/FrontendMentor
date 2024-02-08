@@ -7,12 +7,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 74px;
+  min-height: calc(100vh - 300px);
 }
 
 .card {
   height: 336px;
   width: 264px;
-  background-color: #ffffff;
+  background-color: var(--secondary);
 
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -41,7 +42,7 @@
 .info_title span {
   font-size: 1.125rem;
   font-weight: 800;
-  color: #111517;
+  color: var(--text);
 }
 
 .info_details {
@@ -53,11 +54,66 @@
 .info_details span {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #111517;
+  color: var(--text);
 }
 
 .info_details p {
   font-size: 0.875rem;
   font-weight: 300;
-  color: #111517;
+  color: var(--text);
+}
+
+.pagination {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagination button {
+  cursor: pointer;
+  height: 40px;
+  width: 50px;
+  outline: none;
+  border: none;
+  background-color: var(--secondary);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text);
+
+  gap: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 343px;
+    margin: 0 auto;
+  }
+
+  .cards {
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 300px);
+  }
+
+  .card {
+    height: 336px;
+    width: 264px;
+  }
+
+  .pagination {
+    width: 343px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .pagination button {
+    height: 30px;
+    width: 50px;
+    font-size: 0.75rem;
+    border-radius: 2px;
+  }
 }

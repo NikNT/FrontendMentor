@@ -2,8 +2,10 @@ import React, { useRef, useState, useEffect } from "react";
 import styles from "./SearchFilter.module.css";
 import search from "../../asset/search.png";
 import down from "../../asset/down.png";
+import downLight from "../../asset/down-light.png";
+import searchLight from "../../asset/search-light.png";
 
-const SearchFilter = ({ query, handleSearch, handleFilter }) => {
+const SearchFilter = ({ query, handleSearch, handleFilter, mode, filter }) => {
   const [options, setOptions] = useState(false);
   const filterListRef = useRef(null);
   const handleFilterChange = (country) => {
@@ -25,11 +27,16 @@ const SearchFilter = ({ query, handleSearch, handleFilter }) => {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
+
+  const removeFilter = () => {
+    handleFilter("");
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.search}>
         <div className={styles.icon}>
-          <img src={search} alt="Search" />
+          <img src={mode ? searchLight : search} alt="Search" />
         </div>
         <input
           type="text"
@@ -43,8 +50,13 @@ const SearchFilter = ({ query, handleSearch, handleFilter }) => {
           className={styles.dropdownLabel}
           onClick={() => setOptions(!options)}
         >
-          <span>Filter by Region</span>
-          <img src={down} alt="down arrow" />
+          <span>{filter ? filter : "Filter by Region"}</span>
+          <img src={mode ? downLight : down} alt="down arrow" />
+          {filter && (
+            <button className={styles.removeFilter} onClick={removeFilter}>
+              Remove
+            </button>
+          )}
         </div>
         {options && (
           <div className={styles.dropdownOptions}>

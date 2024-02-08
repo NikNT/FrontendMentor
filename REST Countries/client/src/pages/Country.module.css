@@ -1,0 +1,58 @@
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  height: calc(100vh - 80px);
+}
+
+.button {
+  height: 156px;
+  display: flex;
+  align-items: center;
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+}
+
+.button button {
+  cursor: pointer;
+  height: 40px;
+  width: 136px;
+  outline: none;
+  border: none;
+  background-color: var(--secondary);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.button img {
+  height: 20px;
+  width: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 343px;
+    height: auto;
+  }
+
+  .button button {
+    width: 104px;
+    height: 32px;
+    font-size: 0.875rem;
+    border-radius: 2px;
+  }
+
+  .button img {
+    height: 18px;
+    width: 18px;
+  }
+}
