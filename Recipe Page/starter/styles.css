@@ -19,8 +19,12 @@
 }
 
 body {
+  height: 1955px;
   font-size: 16px;
   background-color: var(--egg-shell);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
