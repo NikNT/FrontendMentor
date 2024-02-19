@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --egg-shell: #f3e5d7;
+  --white: #ffffff;
+  --dark-charcoal: #312e2c;
+  --wenge-brown: #5f564d;
+  --snow: #fff7fb;
+  --dark-raspberry: #7a284e;
+  --brandy-red: #854632;
+  --white-coffee: #e3ddd7;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--egg-shell);
+}
+
+.container {
+  margin: 0 auto;
+  height: 1708px;
+  width: 736px;
+  background-color: var(--white);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  height: 1628px;
+  width: 656px;
+}
+
+.top-image img {
+  height: 300px;
+  border-radius: 12px;
+}
+
+.title {
+  height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.title h1 {
+  color: var(--dark-charcoal);
+  font-size: 2.5rem;
+  font-weight: normal;
+  font-family: "Young Serif", serif;
+}
+
+.title p {
+  color: var(--wenge-brown);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.preparation {
+  height: 180px;
+  background-color: var(--snow);
+  padding: 28px;
+}
+
+.preparation p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-raspberry);
+}
+
+.preparation-wrapper div {
+  height: 88px;
+}
+
+.preparation ul {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-left: 28px;
+}
+
+.preparation ul li p {
+  color: var(--wenge-brown);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.preparation ul li {
+  padding-left: 16px;
+  color: var(--dark-raspberry);
+}
+
+.preparation ul li p span {
+  font-weight: 600;
+}
+
+.ingredients {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.ingredients p {
+  font-size: 1.75rem;
+  color: var(--brandy-red);
+  font-family: "Young Serif", serif;
+}
+
+.ingredients div {
+  margin-top: 24px;
+  padding-left: 28px;
+  height: 152px;
+}
+
+.ingredients div ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ingredients li {
+  padding-left: 16px;
+  padding-bottom: 8px;
+  color: var(--dark-raspberry);
+}
+
+.ingredients ul li p {
+  font-family: "Outfit", sans-serif;
+  color: var(--wenge-brown);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--white-coffee);
+  margin: 32px 0;
+}
+
+.instructions div {
+  margin-top: 24px;
+}
+
+.instructions p {
+  font-size: 1.75rem;
+  color: var(--brandy-red);
+  font-family: "Young Serif", serif;
+}
+
+.instructions div ol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 20px;
+}
+
+.instructions div ol li {
+  color: var(--dark-raspberry);
+  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  padding-left: 16px;
+}
+
+.instructions div ol li p span {
+  color: var(--wenge-brown);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.instructions div ol li p {
+  color: var(--wenge-brown);
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+}
+
+.nutrition {
+  height: 268px;
+}
+
+.nutrition span {
+  font-size: 1.75rem;
+  color: var(--brandy-red);
+  font-family: "Young Serif", serif;
+}
+
+.nutrition p {
+  font-size: 1rem;
+  color: var(--wenge-brown);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+table {
+  height: 158px;
+}
+
+.table-title {
+  color: var(--wenge-brown);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.table-values {
+  color: var(--brandy-red);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border-bottom: 1px solid var(--white-coffee);
+  padding: 8px;
+  text-align: left;
+}
+
+tr {
+  padding-bottom: 12px;
+}
+
+tr:last-child th,
+tr:last-child td {
+  border-bottom: none;
+}
